@@ -1,8 +1,6 @@
 import React from "react";
 import {Route, Switch, Link} from 'react-router-dom'
-
-
-
+import OrderForm from "./Components/Pizza";
 
 
 const App = () => {
@@ -10,17 +8,17 @@ const App = () => {
   return (
     <div className="App">
       <header>Lambda Eats
-      <Link to='/'>Home</Link>
+      <button><Link to='/'>Home</Link></button>
 
-        <Link to='/pizza'>Help</Link>
+      <button><Link to=''>Help</Link></button>
       </header>
       <Switch>
         <Route exact path='/'>
         <h1>Your favorite food delivered while coding</h1>
-        <Link id="order-pizza" to='/pizza'>Order Now</Link>
+        <button><Link id="order-pizza" to='/pizza'>Order Now</Link></button>
         </Route>
-        <Route path='/pizza'>
-          <h2>LOLOLOLOL</h2>
+        <Route path='/pizza/'>
+          <OrderForm />
           
         </Route>
 
